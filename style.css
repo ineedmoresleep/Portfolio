@@ -1,0 +1,237 @@
+/**************************
+        Universal Styles
+***************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}  
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #000000;
+    color: #fff;
+}
+
+/**************************
+        NavBar Styles
+***************************/
+
+.container{
+    padding: 10px 10%;
+}
+
+.logo1{
+    width: 300px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #b38e4fd8;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}    
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/**************************
+        Header Styles
+***************************/
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header-col-1{
+    flex-basis: 50%;
+}
+
+.header-col-2{
+    flex-basis: 50%;
+    margin-top: -55px;
+}
+
+.header-col-2 img{
+    width: 120%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 25px;
+}
+
+
+.header-text h1{
+    font-size: 45px;
+    margin-top: 20px;
+}
+
+.header-text span{
+    color: #b38e4fd8;
+    text-shadow: -0.5px 0.5px 1px #004000;
+}
+
+/**************************
+        About Styles
+***************************/
+#about{
+padding: 80px 0;
+color: #ababab;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 700px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.about-col-2 p{
+    font-size: 23px;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/**************************
+        Portfolio Styles
+***************************/
+#athletes{
+    padding: 50px 0;
+}
+
+.portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* adjust spacing between items */
+    justify-items: center;
+  }
+  
+.portfolio-item{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #1933b4);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.portfolio-item:hover img{
+    transform: scale(1.1);
+}
+
+.portfolio-item:hover .layer{
+    height: 100%;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #fff;
+    background: none;
+    text-decoration: none;
+    font-size: 45px;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    border-radius:50%;
+    text-align: center;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #b38e4fd8;
+    padding: 14px 50px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+    border-radius: 6px;
+}
+
+.btn:hover{
+    background: #1933b4;
+}
+
+
+/**************************
+        Footer Styles
+***************************/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
